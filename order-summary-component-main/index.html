@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    :root{
+      --pclr-Pale-blue: hsl(225, 100%, 94%);
+      --pclr-Bright-blue: hsl(245, 75%, 52%);
+      --nclr-Very-pale-blue: hsl(225, 100%, 98%);
+      --nclr-Desaturated-blue: hsl(224, 23%, 55%);
+      --nclr-Dark-blue: hsl(223, 47%, 23%);
+      --font-size: 16px;
+      --ff-Red-Hat-Display: "Red Hat Display";
+      --fw-normal: 500;
+      --fw-bold: 700;
+      --fw-bolder: 900;
+
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    /*
+      2. Remove default margin
+    */
+    * {
+      margin: 0;
+    }
+    /*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    /*
+      5. Improve media defaults
+    */
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+    }
+    /*
+      6. Remove built-in form typography styles
+    */
+    input, button, textarea, select {
+      font: inherit;
+    }
+    /*
+      7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+    /*
+      8. Create a root stacking context
+    */
+    #root, #__next {
+      isolation: isolate;
+    }
+    body{
+      height: 100vh;
+      background-color:var(--pclr-Pale-blue);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--ff-Red-Hat-Display);
+      font-size: var(--font-size);
+    }
+    .container{
+      max-width: 475.2px;
+      /* max-width: 475.2px; */
+      background-color: white;
+      /* margin-top: 5rem;
+      margin-bottom: 5rem; */
+      margin: 1.5rem;
+      
+      border-radius: 1rem;
+    }
+    .card{
+      border-radius: 1rem;
+      overflow: hidden;
+      --text-size: 1rem;
+      color: var(--nclr-Desaturated-blue);
+      font-weight: var(--fw-normal);
+    }
+    .card__img{
+      width: 100%;
+    }
+    .card__info{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 2rem;
+     gap: 1rem;
+    }
+    .card__info h3 {
+      font-size: 1.4rem;
+    }
+    .description{
+      font-size: var(--text-size);
+      text-align: center;
+    }
+    .card__button{
+      width: 100%;
+      font-size: var(--text-size);
+      height: 3rem;
+      border-radius: 0.8rem ;
+      border: none;
+
+    }
+    .first_button{
+      background-color: var(--pclr-Bright-blue);
+      color: white;
+    }
+    .second_button{
+      background-color: white;
+      color: var(--nclr-Desaturated-blue);
+      font-weight: var(--fw-bolder);
+    }
+    .flex-group{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      gap: 1.5rem;
+      border-radius: 0.8rem;
+      background-color: var(--nclr-Very-pale-blue);
+    }
+    .flex-group img{
+      height: 48px;
+      width: 48px;
+    }
+    .flex-group p {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .clt-nclr-Dark-blue-important{
+      color: var(--nclr-Dark-blue);
+      font-weight: var(--fw-bolder);
+    }
+    a{
+      color: var(--pclr-Bright-blue);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <img class="card__img" src="./images/illustration-hero.svg">
+      <div class="card__info">
+        <h3 class="clt-nclr-Dark-blue-important">Order Summary</h3>
+
+        <p class="description">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+        <div class="flex-group">
+          <img src="./images/icon-music.svg">
+          <p><span class="clt-nclr-Dark-blue-important">Annual Plan</span>
+          $59.99/year</p>
+          <a href="http://www.google.com">Change</a>
+        </div>
+        <button class="card__button first_button">Proceed to Payment</button>
+        <button class="card__button second_button">Cancel Order</button>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </main>
+</body>
+</html>
